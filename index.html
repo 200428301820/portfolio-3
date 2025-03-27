@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasindu Sandamal | Designer & Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+        <span class="loader-text">Loading</span>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#home">
+                    <div class="logo-text">PS</div>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active" data-scroll="home">Home</a></li>
+                    <li><a href="#about" class="nav-link" data-scroll="about">About</a></li>
+                    <li><a href="#projects" class="nav-link" data-scroll="projects">Projects</a></li>
+                    <li><a href="#skills" class="nav-link" data-scroll="skills">Skills</a></li>
+                    <li><a href="#tools" class="nav-link" data-scroll="tools">Tools</a></li>
+                    <li><a href="#contact" class="nav-link" data-scroll="contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-menu-toggle">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-container">
+            <ul class="mobile-nav-links">
+                <li><a href="#home" class="mobile-nav-link" data-scroll="home">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link" data-scroll="about">About</a></li>
+                <li><a href="#projects" class="mobile-nav-link" data-scroll="projects">Projects</a></li>
+                <li><a href="#skills" class="mobile-nav-link" data-scroll="skills">Skills</a></li>
+                <li><a href="#tools" class="mobile-nav-link" data-scroll="tools">Tools</a></li>
+                <li><a href="#contact" class="mobile-nav-link" data-scroll="contact">Contact</a></li>
+            </ul>
+            <div class="mobile-nav-socials">
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-behance"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="section hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                            <span class="highlight">Designer & Developer</span>
+                        </div>
+                        <h1 class="hero-heading" data-aos="fade-up" data-aos-delay="200">
+                            Hi, I'm <span class="gradient-text">Pasindu Sandamal</span>
+                        </h1>
+                        <div class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                            <p>I specialize in creating stunning digital experiences through thoughtful design and efficient web development.</p>
+                        </div>
+                        <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                            <a href="#projects" class="btn btn-primary">View My Work</a>
+                            <a href="#contact" class="btn btn-outline">Contact Me</a>
+                        </div>
+                        <div class="hero-socials" data-aos="fade-up" data-aos-delay="500">
+                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                    <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+                        <div class="image-container">
+                            <!-- Add a dummy image here -->
+                            <img src="https://via.placeholder.com/540x600/0a0a0a/cccccc?text=Profile+Photo" alt="Pasindu Sandamal" class="profile-image">
+                            <div class="floating-card card-experience">
+                                <span class="card-icon"><i class="fas fa-code"></i></span>
+                                <div class="card-content">
+                                    <h3>5+ Years</h3>
+                                    <p>Experience</p>
+                                </div>
+                            </div>
+                            <div class="floating-card card-projects">
+                                <span class="card-icon"><i class="fas fa-trophy"></i></span>
+                                <div class="card-content">
+                                    <h3>100+</h3>
+                                    <p>Projects</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-shape bottom">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="currentColor" fill-opacity="1" d="M0,128L48,149.3C96,171,192,213,288,213.3C384,213,480,171,576,154.7C672,139,768,149,864,160C960,171,1056,181,1152,176C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">Get to know me better</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-image" data-aos="fade-right">
+                        <div class="image-frame">
+                            <!-- Add a dummy image here -->
+                            <img src="https://via.placeholder.com/480x600/0a0a0a/cccccc?text=About+Photo" alt="Pasindu Working" class="about-img">
+                        </div>
+                    </div>
+                    <div class="about-text" data-aos="fade-left">
+                        <h3>Creative Designer & Developer Based in Sri Lanka</h3>
+                        <p>I'm a passionate graphic designer and web developer with a keen eye for detail and a love for creating beautiful, functional designs. With expertise in both visual design and web development, I bring a unique perspective to every project.</p>
+                        <p>My journey began with graphic design, where I honed my creative skills and developed a strong understanding of visual communication. Later, I expanded into web development to bring my designs to life in interactive, responsive websites.</p>
+                        <p>I believe that great design should not only look good but also provide an exceptional user experience. This philosophy guides all my work, whether I'm designing a logo, creating marketing materials, or building a website.</p>
+                        <div class="about-info">
+                            <div class="info-item">
+                                <h4>Name:</h4>
+                                <p>Pasindu Sandamal</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>Email:</h4>
+                                <p>contact@pasindusandamal.com</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>Location:</h4>
+                                <p>Colombo, Sri Lanka</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>Availability:</h4>
+                                <p>Freelance / Full-time</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary">Download CV</a>
+                    </div>
+                </div>
+                <div class="services" data-aos="fade-up">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Graphic Design</h3>
+                        <p>Creating visual content that communicates messages effectively and aesthetically.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Building responsive websites with clean code and modern technologies.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3>UI/UX Design</h3>
+                        <p>Crafting intuitive interfaces and seamless user experiences that delight and engage.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Responsive Design</h3>
+                        <p>Creating websites that work perfectly on any device from desktop to mobile.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="section-shape top">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="currentColor" fill-opacity="1" d="M0,192L48,202.7C96,213,192,235,288,213.3C384,192,480,128,576,122.7C672,117,768,171,864,186.7C960,203,1056,181,1152,170.7C1248,160,1344,160,1392,160L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                </svg>
+            </div>
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">My Projects</h2>
+                    <p class="section-subtitle">Recent work I've done</p>
+                </div>
+                <div class="project-filters" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Design</button>
+                    <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+                    <button class="filter-btn" data-filter="ui">UI/UX Design</button>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-item" data-category="web" data-aos="fade-up">
+                        <div class="project-image">
+                            <!-- Add a dummy image here -->
+                            <img src="https://via.placeholder.com/600x450/111111/cccccc?text=Project+1" alt="E-commerce Website">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>E-commerce Website</h3>
+                                    <p>Web Design / Development</p>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                        <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-item" data-category="graphic" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <!-- Add a dummy image here -->
+                            <img src="https://via.placeholder.com/600x450/111111/cccccc?text=Project+2" alt="Brand Identity">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Brand Identity Design</h3>
+                                    <p>Graphic Design / Branding</p>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                        <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-item" data-category="ui" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <!-- Add a dummy image here -->
+                            <img src="https://via.placeholder.com/600x450/111111/cccccc?text=Project+3" alt="Mobile App UI">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Mobile App UI Design</h3>
+                                    <p>UI/UX Design</p>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                        <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-item" data-category="web" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image">
+                            <!-- Add a dummy image here -->
+                            <img src="https://via.placeholder.com/600x450/111111/cccccc?text=Project+4" alt="Corporate Website">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Corporate Website</h3>
+                                    <p>Web Design / Development</p>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                        <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="project-item" data-category="graphic" data-aos="fade-up" data-aos-delay="400">
+                        <div class="project-image">
+                            <!-- Add a dummy image here -->
+                            <img src="https://via.placeholder.com/600x450/111111/cccccc?text=Project+5" alt="Marketing Campaign">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Marketing Campaign</h3>
+                                    <p>Graphic Design / Marketing</p>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                        <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 6 -->
+                    <div class="project-item" data-category="ui" data-aos="fade-up" data-aos-delay="500">
+                        <div class="project-image">
+                            <!-- Add a dummy image here -->
+                            <img src="https://via.placeholder.com/600x450/111111/cccccc?text=Project+6" alt="Dashboard Design">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Dashboard Design</h3>
+                                    <p>UI/UX Design / Data Visualization</p>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                        <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-more" data-aos="fade-up">
+                    <a href="#" class="btn btn-primary">View All Projects</a>
+                </div>
+            </div>
+            <div class="section-shape bottom">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="currentColor" fill-opacity="1" d="M0,128L48,122.7C96,117,192,107,288,112C384,117,480,139,576,154.7C672,171,768,181,864,165.3C960,149,1056,107,1152,90.7C1248,75,1344,85,1392,90.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">My Skills</h2>
+                    <p class="section-subtitle">Expertise & proficiency</p>
+                </div>
+                <div class="skills-content">
+                    <div class="skills-group" data-aos="fade-right">
+                        <h3>Design Skills</h3>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span class="skill-name">Graphic Design</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar design" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span class="skill-name">UI/UX Design</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar design" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span class="skill-name">Logo Design</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar design" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span class="skill-name">Brand Identity</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar design" data-width="88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-group" data-aos="fade-left">
+                        <h3>Development Skills</h3>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML/CSS</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar development" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percentage">87%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar development" data-width="87%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-percentage">82%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar development" data-width="82%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-info">
+                                    <span class="skill-name">WordPress</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar development" data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-skills" data-aos="fade-up">
+                    <div class="tech-skill">
+                        <div class="tech-skill-icon html">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h4>HTML5</h4>
+                    </div>
+                    <div class="tech-skill">
+                        <div class="tech-skill-icon css">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <h4>CSS3</h4>
+                    </div>
+                    <div class="tech-skill">
+                        <div class="tech-skill-icon js">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h4>JavaScript</h4>
+                    </div>
+                    <div class="tech-skill">
+                        <div class="tech-skill-icon react">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h4>React</h4>
+                    </div>
+                    <div class="tech-skill">
+                        <div class="tech-skill-icon node">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <h4>Node.js</h4>
+                    </div>
+                    <div class="tech-skill">
+                        <div class="tech-skill-icon wordpress">
+                            <i class="fab fa-wordpress"></i>
+                        </div>
+                        <h4>WordPress</h4>
+                    </div>
+                    <div class="tech-skill">
+                        <div class="tech-skill-icon sass">
+                            <i class="fab fa-sass"></i>
+                        </div>
+                        <h4>Sass</h4>
+                    </div>
+                    <div class="tech-skill">
+                        <div class="tech-skill-icon git">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <h4>Git</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="section tools-section">
+            <div class="section-shape top">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="currentColor" fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,256C672,288,768,288,864,266.7C960,245,1056,203,1152,192C1248,181,1344,203,1392,213.3L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                </svg>
+            </div>
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">My Tools</h2>
+                    <p class="section-subtitle">Interactive tools for users</p>
+                </div>
+                <div class="tools-content">
+                    <div class="tools-intro" data-aos="fade-up">
+                        <p>These are tools I've developed that you can use directly from your browser. Click on any tool to start using it.</p>
+                    </div>
+                    <div class="tools-grid">
+                        <!-- Tool 1 -->
+                        <div class="tool-card" data-aos="fade-up">
+                            <div class="tool-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="tool-info">
+                                <h3>Color Palette Generator</h3>
+                                <p>Create beautiful color schemes for your next design project.</p>
+                                <a href="#" class="tool-link">Use Tool <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Tool 2 -->
+                        <div class="tool-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="tool-icon">
+                                <i class="fas fa-crop-alt"></i>
+                            </div>
+                            <div class="tool-info">
+                                <h3>Image Resizer</h3>
+                                <p>Easily resize images for different platforms and uses.</p>
+                                <a href="#" class="tool-link">Use Tool <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Tool 3 -->
+                        <div class="tool-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="tool-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="tool-info">
+                                <h3>Code Formatter</h3>
+                                <p>Format and beautify your HTML, CSS, and JavaScript code.</p>
+                                <a href="#" class="tool-link">Use Tool <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Tool 4 -->
+                        <div class="tool-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="tool-icon">
+                                <i class="fas fa-font"></i>
+                            </div>
+                            <div class="tool-info">
+                                <h3>Font Pairing Assistant</h3>
+                                <p>Find perfect font combinations for your design projects.</p>
+                                <a href="#" class="tool-link">Use Tool <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-shape bottom">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="currentColor" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Contact Me</h2>
+                    <p class="section-subtitle">Let's work together</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info" data-aos="fade-right">
+                        <div class="contact-card">
+                            <div class="contact-card-header">
+                                <h3>Get In Touch</h3>
+                                <p>Feel free to reach out if you're looking for a designer, developer, or just want to connect.</p>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-detail-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h4>Email</h4>
+                                        <a href="mailto:contact@pasindusandamal.com">contact@pasindusandamal.com</a>
+                                    </div>
+                                </div>
+                                <div class="contact-detail-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h4>Phone</h4>
+                                        <a href="tel:+94123456789">+94 123 456 789</a>
+                                    </div>
+                                </div>
+                                <div class="contact-detail-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-text">
+                                        <h4>Location</h4>
+                                        <p>Colombo, Sri Lanka</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-socials">
+                                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-behance"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-container" data-aos="fade-left">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-header">
+                                <h3>Send Me A Message</h3>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <div class="input-group">
+                                    <div class="input-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <div class="input-group">
+                                    <div class="input-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <div class="input-group">
+                                    <div class="input-icon">
+                                        <i class="fas fa-pen"></i>
+                                    </div>
+                                    <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <div class="input-group textarea">
+                                    <div class="input-icon">
+                                        <i class="fas fa-comment-alt"></i>
+                                    </div>
+                                    <textarea id="message" name="message" placeholder="Hello, I'd like to discuss a project..." required></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <div class="logo-text">PS</div>
+                    </div>
+                    <p>Designer & developer passionate about creating beautiful, functional digital experiences.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> contact@pasindusandamal.com</p>
+                    <p><i class="fas fa-phone"></i> +94 123 456 789</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to my newsletter for updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Pasindu Sandamal. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Project Title</h3>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img src="https://via.placeholder.com/800x500/111111/cccccc" alt="Project Detail">
+                </div>
+                <div class="modal-details">
+                    <div class="project-info">
+                        <h4>Project Information</h4>
+                        <ul>
+                            <li><span>Client:</span> Company Name</li>
+                            <li><span>Date:</span> January 2023</li>
+                            <li><span>Category:</span> Web Design</li>
+                            <li><span>Technologies:</span> HTML, CSS, JavaScript, React</li>
+                        </ul>
+                    </div>
+                    <div class="project-description">
+                        <h4>Project Description</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim.</p>
+                        <p>Suspendisse in orci enim. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                    </div>
+                    <a href="#" class="btn btn-primary">View Live</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

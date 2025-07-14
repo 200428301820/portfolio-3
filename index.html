@@ -3,402 +3,455 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Portfolio</title>
-    <!-- Google Fonts - Inter for a clean look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Basic Reset & Body Styling */
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background-color: #f4f7f6; /* Light background */
-            color: #333;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* Header Styling */
-        .header {
-            background-color: #ffffff;
-            padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #2c3e50;
-            font-weight: 700;
-        }
-
-        .header p {
-            font-size: 1.1em;
-            color: #7f8c8d;
-            margin-top: 5px;
-        }
-
-        /* Navigation Styling */
-        .nav {
-            background-color: #3498db; /* Blue accent */
-            padding: 10px 0;
-            text-align: center;
-            border-radius: 10px;
-            margin: 20px auto;
-            max-width: 800px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav a {
-            color: #ffffff;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            border-radius: 8px;
-        }
-
-        .nav a:hover {
-            background-color: #2980b9; /* Darker blue on hover */
-            transform: translateY(-2px);
-        }
-
-        /* Section Styling */
-        .section {
-            background-color: #ffffff;
-            margin: 20px auto;
-            padding: 30px;
-            max-width: 800px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease;
-        }
-
-        .section:hover {
-            transform: translateY(-5px);
-        }
-
-        .section h2 {
-            color: #3498db;
-            font-size: 2em;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 10px;
-            font-weight: 600;
-        }
-
-        /* About Me Section */
-        .about-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 4px solid #3498db;
-            box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 20px;
-            text-align: center;
-        }
-
-        .skill-item {
-            background-color: #ecf0f1;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            transition: background-color 0.3s ease;
-        }
-
-        .skill-item:hover {
-            background-color: #dbe4e6;
-        }
-
-        .skill-item p {
-            margin: 0;
-            font-weight: 500;
-            color: #555;
-        }
-
-        /* Projects Section */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background-color: #ecf0f1;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .project-card-content {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .project-card h3 {
-            margin-top: 0;
-            color: #2c3e50;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            color: #666;
-            font-size: 0.95em;
-            margin-bottom: 15px;
-            flex-grow: 1;
-        }
-
-        .project-card .project-links {
-            margin-top: auto; /* Pushes links to the bottom */
-        }
-
-        .project-card .project-links a {
-            display: inline-block;
-            background-color: #3498db;
-            color: #ffffff;
-            padding: 8px 15px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 0.9em;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-            margin-right: 10px;
-        }
-
-        .project-card .project-links a:hover {
-            background-color: #2980b9;
-        }
-
-        /* Contact Section */
-        .contact-info p {
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-
-        .contact-info a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            color: #2980b9;
-        }
-
-        /* Footer Styling */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            background-color: #2c3e50; /* Dark footer */
-            color: #ecf0f1;
-            font-size: 0.9em;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2em;
-            }
-
-            .nav a {
-                display: block;
-                margin: 5px 0;
-            }
-
-            .section {
-                margin: 15px;
-                padding: 20px;
-            }
-
-            .skills-grid, .project-grid {
-                grid-template-columns: 1fr; /* Stack columns on smaller screens */
-            }
-
-            .about-content {
-                flex-direction: column;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header h1 {
-                font-size: 1.8em;
-            }
-
-            .header p {
-                font-size: 1em;
-            }
-
-            .nav {
-                margin: 10px auto;
-            }
-
-            .nav a {
-                padding: 8px 15px;
-                font-size: 0.9em;
-            }
-
-            .section h2 {
-                font-size: 1.8em;
-            }
-
-            .profile-pic {
-                width: 120px;
-                height: 120px;
-            }
-        }
-    </style>
+    <title>Pasindu Sandamal - Web Developer & Graphic Designer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-    <header class="header">
-        <h1>John Doe</h1>
-        <p>Web Developer | UI/UX Enthusiast | Creative Problem Solver</p>
-    </header>
-
-    <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Pasindu</span>
+                <span class="logo-accent">Sandamal</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#tools" class="nav-link">Tools</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
 
-    <main>
-        <section id="about" class="section">
-            <h2>About Me</h2>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="typing-text">Hello, I'm Pasindu</span>
+                    </h1>
+                    <p class="hero-subtitle">Web Developer & Graphic Designer</p>
+                    <p class="hero-description">
+                        I create beautiful, functional websites and stunning visual designs 
+                        that bring ideas to life. Let's build something amazing together.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="img1.png" 
+                             alt="Pasindu Sandamal" class="profile-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about creating digital experiences</p>
+            </div>
             <div class="about-content">
-                <img src="https://placehold.co/150x150/3498db/ffffff?text=JD" alt="Profile Picture" class="profile-pic">
-                <p>Hello! I'm John Doe, a passionate web developer with a keen eye for creating intuitive and engaging user experiences. I love bringing ideas to life through clean code and thoughtful design. My journey in web development started with a curiosity for how websites work, which quickly turned into a passion for building them.</p>
-                <p>I specialize in front-end development, focusing on responsive design and interactive elements. I'm always eager to learn new technologies and improve my craft. When I'm not coding, you can find me exploring new design trends or enjoying a good book.</p>
+                <div class="about-text">
+                    <p>
+                        I'm a passionate web developer and graphic designer with a keen eye for detail 
+                        and a love for creating exceptional digital experiences. My journey in the tech 
+                        world has been driven by curiosity and a constant desire to learn and innovate.
+                    </p>
+                    <p>
+                        With expertise in both front-end development and graphic design, I bridge the 
+                        gap between technical functionality and visual appeal. I believe that great 
+                        design should not only look beautiful but also provide an intuitive and 
+                        seamless user experience.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="skills" class="section">
-            <h2>Skills</h2>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
             <div class="skills-grid">
-                <div class="skill-item">
-                    <p>HTML5</p>
-                </div>
-                <div class="skill-item">
-                    <p>CSS3</p>
-                </div>
-                <div class="skill-item">
-                    <p>JavaScript (ES6+)</p>
-                </div>
-                <div class="skill-item">
-                    <p>React.js</p>
-                </div>
-                <div class="skill-item">
-                    <p>Tailwind CSS</p>
-                </div>
-                <div class="skill-item">
-                    <p>Git & GitHub</p>
-                </div>
-                <div class="skill-item">
-                    <p>Responsive Design</p>
-                </div>
-                <div class="skill-item">
-                    <p>UI/UX Principles</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="https://placehold.co/400x200/27ae60/ffffff?text=Project+1" alt="Project 1 Thumbnail">
-                    <div class="project-card-content">
-                        <h3>E-commerce Store Redesign</h3>
-                        <p>A modern and responsive redesign of an online retail platform, focusing on improved user flow and visual appeal. Implemented with React and styled with Tailwind CSS.</p>
-                        <div class="project-links">
-                            <a href="#" target="_blank">View Live</a>
-                            <a href="#" target="_blank">GitHub</a>
+                <div class="skill-category">
+                    <h3 class="category-title">Frontend Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-vue"></i>
+                            <span>Vue.js</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <img src="https://placehold.co/400x200/e67e22/ffffff?text=Project+2" alt="Project 2 Thumbnail">
-                    <div class="project-card-content">
-                        <h3>Interactive Data Dashboard</h3>
-                        <p>Developed a dynamic dashboard for visualizing complex datasets, featuring interactive charts and filters. Built using vanilla JavaScript and D3.js.</p>
-                        <div class="project-links">
-                            <a href="#" target="_blank">View Live</a>
-                            <a href="#" target="_blank">GitHub</a>
+                <div class="skill-category">
+                    <h3 class="category-title">Backend Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>Express.js</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <img src="https://placehold.co/400x200/9b59b6/ffffff?text=Project+3" alt="Project 3 Thumbnail">
-                    <div class="project-card-content">
-                        <h3>Personal Blog Platform</h3>
-                        <p>A minimalist blog platform with a clean interface for content creation and consumption. Features a custom markdown parser and responsive layout.</p>
-                        <div class="project-links">
-                            <a href="#" target="_blank">View Live</a>
-                            <a href="#" target="_blank">GitHub</a>
+                <div class="skill-category">
+                    <h3 class="category-title">Design</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Photoshop</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-vector-square"></i>
+                            <span>Illustrator</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cube"></i>
+                            <span>After Effects</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-drafting-compass"></i>
+                            <span>Figma</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="section">
-            <h2>Contact Me</h2>
-            <div class="contact-info">
-                <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
-                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-                <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-                <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+    <!-- Tools Section -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Tools</h2>
+                <p class="section-subtitle">Custom tools and applications I've created</p>
             </div>
-        </section>
-    </main>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="tool-title">Code Generator</h3>
+                    <p class="tool-description">
+                        A powerful tool that generates clean, optimized code snippets 
+                        for common web development tasks.
+                    </p>
+                    <div class="tool-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <a href="#" class="tool-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Tool
+                    </a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="tool-title">Color Palette Generator</h3>
+                    <p class="tool-description">
+                        Generate beautiful color palettes for your design projects 
+                        with accessibility considerations.
+                    </p>
+                    <div class="tool-tags">
+                        <span class="tag">Design</span>
+                        <span class="tag">Colors</span>
+                        <span class="tag">Accessibility</span>
+                    </div>
+                    <a href="#" class="tool-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Tool
+                    </a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3 class="tool-title">Image Optimizer</h3>
+                    <p class="tool-description">
+                        Compress and optimize images for web use while maintaining 
+                        quality and reducing file sizes.
+                    </p>
+                    <div class="tool-tags">
+                        <span class="tag">Images</span>
+                        <span class="tag">Optimization</span>
+                        <span class="tag">Performance</span>
+                    </div>
+                    <a href="#" class="tool-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Tool
+                    </a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="tool-title">Responsive Tester</h3>
+                    <p class="tool-description">
+                        Test your website's responsiveness across different devices 
+                        and screen sizes instantly.
+                    </p>
+                    <div class="tool-tags">
+                        <span class="tag">Testing</span>
+                        <span class="tag">Responsive</span>
+                        <span class="tag">Development</span>
+                    </div>
+                    <a href="#" class="tool-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Tool
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A showcase of my recent work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop" alt="E-commerce Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">
+                            A full-stack e-commerce solution with modern UI/UX, 
+                            payment integration, and admin dashboard.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=500&h=300&fit=crop" alt="Task Management App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">
+                            A collaborative task management application with real-time 
+                            updates and team collaboration features.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=500&h=300&fit=crop" alt="Brand Identity Design">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Brand Identity Design</h3>
+                        <p class="project-description">
+                            Complete brand identity package including logo design, 
+                            color palette, and brand guidelines.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Illustrator</span>
+                            <span class="tech-tag">Photoshop</span>
+                            <span class="tech-tag">InDesign</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together on your next project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>pasindu@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+94 77 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Colombo, Sri Lanka</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 John Doe. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Pasindu Sandamal. All rights reserved.</p>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
